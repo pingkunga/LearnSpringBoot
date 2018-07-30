@@ -17,7 +17,7 @@ public class PersonServiceImpl implements PersonService
     {
         this.personRepository = personRepository;
     }
-    
+
     @Override
     public Person viewOwner()
     {
@@ -43,9 +43,4 @@ public class PersonServiceImpl implements PersonService
     public void deletePerson(Integer id) {
         personRepository.deleteById(id);
     }
-
-
-
-    
-
 }

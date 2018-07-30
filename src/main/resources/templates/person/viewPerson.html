@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head lang="en">
-    <title>Spring Boot Example</title>
-    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}" href="../../static/css/bootstrap.min.css"  media="screen"/>
-    <script th:src="@{/js/bootstrap.min.js}" src="../../js/bootstrap.min.js"></script> 
-    <th:block th:include="fragments/header :: header"></th:block>
-
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" 
+      layout:decorator="layouts/mainLayout">
+                        
+<head>
+    <title>Layout</title>
 </head>
 <body>
-    <div class="container">
+    <div layout:fragment="content">
         <h2>Person Details</h2>
         <div>
             <form class="form-horizontal" th:object="${person}" th:action="@{/person}" method="post">
